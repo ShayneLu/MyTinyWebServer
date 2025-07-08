@@ -110,6 +110,7 @@
     "epollfd",
     "EPOLLHUP",
     "EPOLLIN",
+    "EPOLLONESHOT",
     "EPOLLOUT",
     "EPOLLRDHUP",
     "LCIS",
