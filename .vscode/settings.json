@@ -1,0 +1,170 @@
+{
+  "workbench.startupEditor": "none",
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "aide.openaiKey": "sk-e5fa083fc6834eaf8f510286f78696d0",
+  "aide.openaiModel": "deepseek-coder",
+  "aide.openaiBaseUrl": "https://api.deepseek.com",
+  "extensions.ignoreRecommendations": true,
+  "aide.aiCommand": "#{content}",
+  //以下是自己加的配置，见B站视频。注意上一段末尾需要手动加英文逗号
+  "files.autoSave": "afterDelay", //自动保存
+  "files.autoGuessEncoding": true,
+  "editor.cursorBlinking": "smooth",
+  "editor.mouseWheelZoom": true,
+  "editor.formatOnPaste": false,
+
+  "editor.formatOnType": false,
+  "editor.formatOnSave": true,
+  "editor.wordWrap": "on", //自动折行
+  "editor.guides.bracketPairs": true,
+  //"editor.bracketPairColorization.enabled": true, (此设置vscode在较新版本已默认开启)
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "editor.acceptSuggestionOnEnter": "smart",
+  "editor.suggestSelection": "recentlyUsedByPrefix",
+  "window.dialogStyle": "custom",
+  "debug.showBreakpointsInOverviewRuler": true,
+  "problems.showCurrentInStatus": true,
+  "problems.sortOrder": "position",
+
+  //代码提示相关
+  "C_Cpp.intelliSenseEngine": "Tag Parser",
+
+  //来自插件code runner
+  "code-runner.runInTerminal": true,
+  "code-runner.saveAllFilesBeforeRun": true,
+  "code-runner.saveFileBeforeRun": true,
+  "editor.fontFamily": "Source Code Pro Medium",
+  "files.associations": {
+    "iosfwd": "cpp",
+    "iostream": "cpp",
+    "new": "cpp",
+    "ostream": "cpp",
+    "*.tcc": "cpp",
+    "array": "cpp",
+    "atomic": "cpp",
+    "cctype": "cpp",
+    "clocale": "cpp",
+    "cmath": "cpp",
+    "cstdarg": "cpp",
+    "cstddef": "cpp",
+    "cstdint": "cpp",
+    "cstdio": "cpp",
+    "cstdlib": "cpp",
+    "cstring": "cpp",
+    "ctime": "cpp",
+    "cwchar": "cpp",
+    "cwctype": "cpp",
+    "deque": "cpp",
+    "unordered_map": "cpp",
+    "vector": "cpp",
+    "exception": "cpp",
+    "algorithm": "cpp",
+    "functional": "cpp",
+    "iterator": "cpp",
+    "memory": "cpp",
+    "memory_resource": "cpp",
+    "numeric": "cpp",
+    "optional": "cpp",
+    "random": "cpp",
+    "string": "cpp",
+    "string_view": "cpp",
+    "system_error": "cpp",
+    "tuple": "cpp",
+    "type_traits": "cpp",
+    "utility": "cpp",
+    "fstream": "cpp",
+    "initializer_list": "cpp",
+    "iomanip": "cpp",
+    "istream": "cpp",
+    "limits": "cpp",
+    "sstream": "cpp",
+    "stdexcept": "cpp",
+    "streambuf": "cpp",
+    "typeinfo": "cpp",
+    "thread": "cpp",
+    "valarray": "cpp",
+    "chrono": "cpp",
+    "ratio": "cpp",
+    "list": "cpp",
+    "unordered_set": "cpp",
+    "mutex": "cpp",
+    "cerrno": "cpp",
+    "map": "cpp"
+  },
+  "Codegeex.CompletionDelay": 0.4,
+  "Codegeex.GenerationPreference": "line by line",
+  "Codegeex.Chat.fontSize": 12,
+  "cSpell.words": [
+    "abcdjfhfwfs",
+    "actormodel",
+    "constkreturn",
+    "constreturn",
+    "cosnt",
+    "cout",
+    "dealclientdata",
+    "dealwithread",
+    "dealwithsignal",
+    "dealwithwrite",
+    "EPOLLERR",
+    "epollfd",
+    "EPOLLHUP",
+    "EPOLLIN",
+    "EPOLLOUT",
+    "EPOLLRDHUP",
+    "LCIS",
+    "mylist",
+    "npos",
+    "nums",
+    "pqrs",
+    "proactor",
+    "trigmode",
+    "wxyz",
+    "yourdb"
+  ],
+  "cSpell.enabled": true,
+  "cSpell.language": "en",
+  "C_Cpp.errorSquiggles": "Enabled",
+  "bookmarks.sideBar.expanded": true,
+  "cSpell.customDictionaries": {
+    "custom-dictionary-workspace": {
+      "name": "custom-dictionary-workspace",
+      "path": "${workspaceFolder:Cpp}/.cspell/custom-dictionary-workspace.txt",
+      "addWords": true,
+      "scope": "workspace"
+    }
+  },
+  // ## 配置快捷键
+  // before是自定义的快捷键，after是效果
+  "vim.leader": "<Space>",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "j"],
+      "after": ["8", "j"]
+    },
+    {
+      "before": ["<leader>", "k"],
+      "after": ["8", "k"]
+    },
+    {
+      "before": ["<leader>", "left"],
+      "after": ["<C-w>", ">"]
+    },
+    {
+      "before": ["<leader>", "right"],
+      "after": ["<C-w>", "<"]
+    },
+    {
+      "before": ["<leader>", "up"],
+      "after": ["<C-w>", "+"]
+    },
+    {
+      "before": ["<leader>", "down"],
+      "after": ["<C-w>", "-"]
+    },
+    {
+      "before": ["f"],
+      "after": ["<leader>", "<leader>", "s"]
+    }
+  ]
+}

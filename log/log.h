@@ -14,16 +14,24 @@ class Log
 {
 public:
     //C++11以后,使用局部变量懒汉不用加锁
-    static Log *get_instance()
+    static Log *get_instance()// 静态方法获取唯一实例
     {
-        static Log instance;
+        static Log instance;// C++11保证线程安全的局部静态变量
         return &instance;
     }
 
-    static void *flush_log_thread(void *args)
-    {
-        Log::get_instance()->async_write_log();
+    // 线程入口函数，用于异步写入日志，加入异常处理
+    static void *flush_log_thread(void *args) {
+        try {
+            // 获取日志单例并执行异步写入
+            Log::get_instance()->async_write_log();
+        } catch (const std::exception &e) {
+            std::cerr << "Exception in flush_log_thread: " << e.what()
+                      << std::endl;
+        }
+        return nullptr;
     }
+    
     //可选择的参数有日志文件、日志缓冲区大小、最大行数以及最长日志条队列
     bool init(const char *file_name, int close_log, int log_buf_size = 8192, int split_lines = 5000000, int max_queue_size = 0);
 
@@ -32,16 +40,16 @@ public:
     void flush(void);
 
 private:
-    Log();
+    Log(); // 构造函数私有化，禁止外部创建实例
     virtual ~Log();
     void *async_write_log()
     {
         string single_log;
         //从阻塞队列中取出一个日志string，写入文件
-        while (m_log_queue->pop(single_log))
+        while (m_log_queue->pop(single_log))    //single_log就是取出的队首元素
         {
             m_mutex.lock();
-            fputs(single_log.c_str(), m_fp);
+            fputs(single_log.c_str(), m_fp);    //把single_log写入文件
             m_mutex.unlock();
         }
     }

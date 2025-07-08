@@ -1,0 +1,7 @@
+# Custom Dictionary Words
+abcdjfhfwfs
+catsandog
+mydeque
+mylist
+ostreamn
+palindromeString

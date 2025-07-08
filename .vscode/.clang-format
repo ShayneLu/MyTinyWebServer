@@ -1,0 +1,20 @@
+Language: Cpp
+BasedOnStyle: Google
+UseTab: Never # 使用空格而不是制表符。
+IndentWidth: 4 # 缩进宽度为4个空格。
+TabWidth: 4 # Tab长度
+ColumnLimit:  # 单行的字符长度不进行限制
+BreakBeforeBinaryOperators: None  # 禁止在运算符前换行
+BinPackParameters: true   # 紧凑排列参数
+BinPackArguments: true    # 紧凑排列参数
+AllowAllParametersOfDeclarationOnNextLine: true  # 允许声明参数换行
+AlignAfterOpenBracket: DontAlign  # 不对齐括号后内容
+
+ReflowComments: false          # 禁止重新排版注释
+AlignTrailingComments: true   # 对齐行尾注释
+
+
+AllowAllArgumentsOnNextLine: false  # 不允许参数全部换行
+PenaltyBreakBeforeFirstCallParameter: 10000  # 大幅提高"在第一个参数前换行"的惩罚值
+PenaltyBreakOpenParenthesis: 10000 # 大幅提高"在开括号后换行"的惩罚值
+
